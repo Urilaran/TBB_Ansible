@@ -18,4 +18,12 @@
     - role: useradd
   tags: useradd
 
+- hosts: all
+  become: yes
+  remote_user: anil
+  roles:
+    - role: stat
+  tags: stat
+
+
  
