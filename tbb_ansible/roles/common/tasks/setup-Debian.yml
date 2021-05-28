@@ -1,0 +1,7 @@
+- name: rsyslog serverı kurma Debian
+  apt:
+   name: rsyslog
+   state: present
+  service: "name=rsyslog state=restarted" 
+
+

@@ -1,0 +1,5 @@
+---
+- name: httpd webserver kurulumu
+  yum:
+   name: httpd
+   state: present

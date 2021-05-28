@@ -1,0 +1,4 @@
+- name: RedHat httpd kurulum
+  apt:
+   name: httpd
+   state: present

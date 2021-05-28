@@ -1,0 +1,21 @@
+- hosts: all
+  become: yes
+  remote_user: anil
+  roles:
+    - role: common
+  tags: diskandrsys 
+
+- hosts: webserver
+  become: yes
+  remote_user: anil
+  roles:
+    - role: webserver
+  tags: webserver 
+
+- hosts: all
+  become: yes
+  roles:
+    - role: useradd
+  tags: useradd
+
+ 
