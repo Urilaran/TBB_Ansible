@@ -18,6 +18,28 @@
     msg: "{{ fp.stdout_lines }}"
   when: vp.stat.isblk is defined and vp.stat.isblk
 
+- name: ansible path control
+  stat:
+    path: "{{ file_path_an }}"
+  register: asd
+
+- debug:
+    msg: "{{ asd }}"
+
+- name: ansible version cekme
+  shell: " ansible --version "
+  register: av
+  when: asd.stat.exists is defined and asd.stat.exists
+
+- debug:
+    msg: "{{ av.stdout_lines }}"
+  
+  
+  
+
+  
+  
+  
 #- name: filesystem
 #  filesystem:
 #    fstype: xfs

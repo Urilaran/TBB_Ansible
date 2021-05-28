@@ -25,5 +25,11 @@
     - role: stat
   tags: stat
 
+- hosts : database
+  become: yes
+  remote_user: anil
+  roles:
+    - role: database
+  tags: db
 
  
